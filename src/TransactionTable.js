@@ -1,5 +1,6 @@
 import React from 'react';
 import DataItem from './DataItem';
+import './TransactionTable.css'
 
 const TransactionTable = ({ transactions, searchTerm }) => {
   const filteredTransactions = transactions.filter(transaction =>
@@ -9,7 +10,6 @@ const TransactionTable = ({ transactions, searchTerm }) => {
   return (
     <table className="transaction-table">
       <thead>
-        {/* Table headers */}
       </thead>
       <tbody>
         {filteredTransactions.map(transaction => (

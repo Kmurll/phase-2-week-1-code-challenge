@@ -6,7 +6,8 @@
     margin-top: 20px;
   }
   
-  .transaction-table th, .transaction-table td {
+  .transaction-table th,
+  .transaction-table td {
     border: 1px solid #ccc;
     padding: 10px;
     text-align: left;
