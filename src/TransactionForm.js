@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import './TransactionForm.css';
+
 
 const TransactionForm = ({ onAddTransaction }) => {
   const [date, setDate] = useState(''); 
@@ -14,6 +16,7 @@ const TransactionForm = ({ onAddTransaction }) => {
     }
 
     const newTransaction = {
+      id: Date.now(), // Using timestamp as a simple example
       date,
       description,
       category,
@@ -29,33 +32,36 @@ const TransactionForm = ({ onAddTransaction }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input
-        type="text"
-        placeholder="Date"
-        value={date} // Use 'date' state here
-        onChange={e => setDate(e.target.value)}
-      />
-      <input
-        type="text"
-        placeholder="Description"
-        value={description}
-        onChange={e => setDescription(e.target.value)}
-      />
-      <input
-        type="text"
-        placeholder="Category"
-        value={category}
-        onChange={e => setCategory(e.target.value)}
-      />
-      <input
-        type="number"
-        placeholder="Amount"
-        value={amount}
-        onChange={e => setAmount(e.target.value)}
-      />   
-      <button type="submit">Add Transaction</button>
-    </form>
+    <div className="form-container">
+      <h2>Add Transaction</h2>
+      <form onSubmit={handleSubmit}>
+        <input
+          type="text"
+          placeholder="Date"
+          value={date}
+          onChange={e => setDate(e.target.value)}
+        />
+        <input
+          type="text"
+          placeholder="Description"
+          value={description}
+          onChange={e => setDescription(e.target.value)}
+        />
+        <input
+          type="text"
+          placeholder="Category"
+          value={category}
+          onChange={e => setCategory(e.target.value)}
+        />
+        <input
+          type="number"
+          placeholder="Amount"
+          value={amount}
+          onChange={e => setAmount(e.target.value)}
+        />   
+        <button type="submit">Add Transaction</button>
+      </form>
+    </div>
   );
 };
 
