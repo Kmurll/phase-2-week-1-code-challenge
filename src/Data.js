@@ -2,14 +2,27 @@ import React, { useState, useEffect } from "react";
 import DataItem from './DataItem';
 import './TransactionTable.css'; // Import the CSS file
 
-const Data = () => {
-    const [transactions, setTranscations] = useState([])
+const Data = ({ searchTerm }) => {
+    const [transactions, setTransactions] = useState([]);
+    const [filteredTransactions, setFilteredTransactions] = useState([]);
 
     useEffect(() => {
         fetch('http://127.0.0.1:4000/transactions')
         .then(response => response.json())
-        .then(data => setTranscations(data))
-    },[])
+        .then(data => setTransactions(data))
+        .catch(error => console.error('Error fetching data:', error));
+    }, []);
+
+    useEffect(() => {
+        if (searchTerm) {
+            const filtered = transactions.filter(transaction =>
+                transaction.description.toLowerCase().includes(searchTerm.toLowerCase())
+            );
+            setFilteredTransactions(filtered);
+        } else {
+            setFilteredTransactions(transactions);
+        }
+    }, [transactions, searchTerm]);
 
     return (
         <table className="transaction-table">
@@ -22,7 +35,7 @@ const Data = () => {
                 </tr>
             </thead>
             <tbody>
-                {transactions.map((transaction) => (
+                {filteredTransactions.map((transaction) => (
                     <tr key={transaction.id}>
                         <td>{transaction.date}</td>
                         <td>{transaction.description}</td>
@@ -36,4 +49,3 @@ const Data = () => {
 }
 
 export default Data;
-
