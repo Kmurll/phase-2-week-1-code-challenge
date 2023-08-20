@@ -1,0 +1,18 @@
+/* DataItem.css */
+.data-item {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    background-color: #f5f5f5;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .data-item h2 {
+    font-size: 1.2rem;
+    margin: 0;
+  }
+  
+  .data-item p {
+    margin: 5px 0;
+  }
+  
