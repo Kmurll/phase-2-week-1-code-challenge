@@ -1,6 +1,4 @@
 import React, { useState } from 'react';
-import './TransactionForm.css';
-
 
 const TransactionForm = ({ onAddTransaction }) => {
   const [date, setDate] = useState(''); 
@@ -16,7 +14,7 @@ const TransactionForm = ({ onAddTransaction }) => {
     }
 
     const newTransaction = {
-      id: Date.now(), // Using timestamp as a simple example
+      id: Date.now(),
       date,
       description,
       category,
@@ -35,7 +33,7 @@ const TransactionForm = ({ onAddTransaction }) => {
     <div className="form-container">
       <h2>Add Transaction</h2>
       <form onSubmit={handleSubmit}>
-        <input
+      <input
           type="text"
           placeholder="Date"
           value={date}
@@ -66,3 +64,4 @@ const TransactionForm = ({ onAddTransaction }) => {
 };
 
 export default TransactionForm;
+
