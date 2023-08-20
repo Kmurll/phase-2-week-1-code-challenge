@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './TransactionForm.css'
 
 const TransactionForm = ({ onAddTransaction }) => {
   const [date, setDate] = useState(''); 
