@@ -42,7 +42,7 @@ const TransactionForm = ({ onAddTransaction }) => {
       <form onSubmit={handleSubmit}>
         {/* Input fields for Date, Description, Category, and Amount */}
         <input
-          type="text"
+          type="date"
           placeholder="Date"
           value={date}
           onChange={e => setDate(e.target.value)}
