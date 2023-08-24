@@ -1,0 +1,50 @@
+/* TransactionForm.css */
+.form-container {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .form-container h2 {
+    margin: 0 0 20px;
+    font-size: 1.5rem;
+  }
+  
+  .form-container form {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .form-container input,
+  .form-container button {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    font-size: 16px;
+    outline: none;
+  }
+  
+  .form-container input[type="number"] {
+    appearance: textfield; /* Hide up/down arrows on number input */
+  }
+  
+  .form-container button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  .form-container button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Adjust more styles as needed */
+  

@@ -1,0 +1,29 @@
+/* TransactionTable.css */
+.transaction-table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #ccc;
+    margin-top: 20px;
+  }
+  
+  .transaction-table th,
+  .transaction-table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+  }
+  
+  .transaction-table th {
+    background-color: #f5f5f5;
+    font-weight: bold;
+  }
+  
+  .transaction-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  .transaction-table tr:hover {
+    background-color: #e0e0e0;
+    cursor: pointer;
+  }
+  
