@@ -10,11 +10,12 @@ To run this project, you need the following:
 
 ## Setup Instructions
 Follow these steps to set up the project on your local machine:
-1. Clone the repository: `git clone git@github.com:Kmurll/phase-2-week-1-code-challenge.git`
-2. Navigate to the project directory: `cd phase-2-week-1-code-challenge `
-3. Install dependencies: `npm install`
-4. Start the development server: `npm start`
-5. Open your browser and go to `http://localhost:3000` to access the app.
+1. Make sure the db.json file is running at http://127.0.0.1:4000/transactions
+2. Clone the repository: `git clone git@github.com:Kmurll/phase-2-week-1-code-challenge.git`
+3. Navigate to the project directory: `cd phase-2-week-1-code-challenge `
+4. Install dependencies: `npm install`
+5. Start the development server: `npm start`
+6. Open your browser and go to `http://localhost:3000` to access the app.
 
 ## Technologies Used
 * React
